@@ -35,10 +35,13 @@ function _post_link_blank_filter($links){
 	}
 }
 
-add_action( 'init', 'activate_au' );
-function activate_au()
+add_action( 'init', 'post_link_blank_update' );
+function post_link_blank_update()
 {
-	require_once ( 'wp_autoupdate.php' );
+	
+	if (!class_exists('WP_AutoUpdate')) 
+		require_once ( 'wp_autoupdate.php' );
+
 	$plugin_current_version = '1.0.0';
 	$plugin_remote_path = 'https://wpdev.yoemprendo.online/update.php?plugin=post_link_blank';
 	$plugin_slug = plugin_basename( __FILE__ );
