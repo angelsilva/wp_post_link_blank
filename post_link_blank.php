@@ -4,7 +4,7 @@
 * Plugin Name: PostLinkBlank
 * Plugin URI: http://www.example.com
 * Description: Add Target Blank to Link Post, except internal links
-* Version: 1.0.0
+* Version: 1.1.0
 * Author: Example
 * Author URI: http://www.example.com
 * License: GPL2
@@ -42,7 +42,7 @@ function post_link_blank_update()
 	if (!class_exists('WP_AutoUpdate')) 
 		require_once ( 'wp_autoupdate.php' );
 
-	$plugin_current_version = '1.0.0';
+	$plugin_current_version = '1.1.0';
 	$plugin_remote_path = 'https://wpdev.yoemprendo.online/update.php?plugin=post_link_blank';
 	$plugin_slug = plugin_basename( __FILE__ );
 	$license_user = '';
